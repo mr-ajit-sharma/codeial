@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%=title%>
+    </title>
+    <!-- here we have used the noty js framework -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+    <!-- here we have included the jqwuery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <!-- her we are including the css by ejs way which is usedto override on parent css -->
+    <link rel="stylesheet" href="<%= assetPath('css/layout.css')%>">
+    <link rel="stylesheet" href="<%= assetPath('css/header.css')%>">
+    <link rel="stylesheet" href="<%= assetPath('css/footer.css')%>">
+    <%-style%>
+</head>
+
+<body>
+    <!-- here we are including the html pages by using the attribute include -->
+    <%-include('_header');%>
+    <main id="layout-main">
+        <%-body%>
+        
+    </main>
+    <%-include('_footer');%>
+    <%-script%>
+    <script>
+                    // here we have used the noty javascript with the help of its documentation
+        <%if (flash.success && flash.success.length > 0) {%>
+                        new Noty({
+                            theme: 'sunset',
+                            type: 'success',
+                            layout: 'topRight',
+                            text: '<h3><%= flash.success%></h3>',
+                            timeout: 1500
+                        }).show();
+            <%}%>
+        <%if (flash.error && flash.error.length > 0) {%>
+                        new Noty({
+                            theme: 'relax',
+                            type: 'error',
+                            layout: 'topRight',
+                            text: '<h3><%= flash.error%></h3>',
+                            timeout: 1500
+                        }).show();
+                        <%}%>
+                        </script>
+</body>
+
+</html>

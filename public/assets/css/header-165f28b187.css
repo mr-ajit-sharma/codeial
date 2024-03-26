@@ -1,0 +1,33 @@
+li{
+    list-style: none;
+}
+a{
+    /* border: 2px solid white; */
+    font-size: x-large;
+    height: 1em;
+    padding: .1em;
+    width: 3.9em;
+    text-decoration: none;
+}
+.left-si{
+    font-size: 2em;
+    position:absolute;
+    top: 1em;
+    right: .2em;
+}
+.left-su{
+    font-size: 2em;
+    position:absolute;
+    top: 1em;
+    right: 4.5em;
+}
+.btn-effect:hover{
+    border-radius: 1em;
+    color: #fff;
+    border: 2px solid black ;
+    background-color: crimson;
+}
+
+
+
+    

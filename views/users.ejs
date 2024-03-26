@@ -1,0 +1,38 @@
+<!-- <!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title><%=title%></title>
+        </head>
+        <body> -->
+<!-- here we have laern the partial formate -->
+<!-- here we are just trying to include another page by  include functionality of the ejs -->
+<!-- <%-include('_header');%> -->
+<link rel="stylesheet" href="/css/user.css">
+
+<h1><%=title%></h1>
+
+<!-- here we are trying to upload a profile pic or avatar -->
+<img src="<%=user.avatar%>" width="100px" alt="<%=user.name%>">
+<%if(user.id==profile_user.id){%>
+    <!-- if the user matches then open the form -->
+    <form action="/users/update/<%= profile_user.id%>" method="post" enctype="`multipart/form-data">
+        <input type="text" name="name" required value="<%= profile_user.name %>" placeholder="your name">
+        <input type="email" name="email" required value="<%= profile_user.email %>" placeholder="your email">
+        <input type="file" name="avatar" placeholder="profile picture" id="">
+        <input type="submit" value="update">
+    </form>
+    <%}else{%>
+        <!-- only show the profile info -->
+        <p>name: <%= profile_user.name%>
+        </p>
+        <p>email: <%= profile_user.email%>
+        </p>
+        
+        <%}%>
+
+
+        <!-- </body>
+                </html> -->

@@ -1,0 +1,35 @@
+<!-- <link rel="stylesheet" href=""> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="/css/mail.css"> -->
+    <style>
+       div>#mail-comment{
+    height: 30em;
+    justify-content: center;
+    width: 60vw;
+    margin: 2em;
+    padding: 1.5em;
+    border: 2px double red;
+    background:cadetblue;
+    font-family: sans-serif;
+    color: black;
+    }
+    </style>
+</head>
+<body>
+    <div id="mail-comment" >
+        <p>Hello mr.... <h2><%=comment.user.name%>,</h2></p>
+        <br>
+        <br>
+        <p>Someone has told in the form of the comment "<em><h4><%=comment.content%></h4> </em>" which is going to published on the codeial. </p>
+        <br>
+        <br>
+        <p>Thanks!!</p>
+    </div> 
+    
+</body>
+</html>

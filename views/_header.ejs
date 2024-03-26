@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="/css/header.css">
+<!-- <header class="" >
+    i m header
+</header> -->
+<ul class="border border-warning ">
+
+    <%if(locals.user){%>
+        <li class="" >
+            <a class="text-decoration text-decoration-none btn-effect left-si"  href="/users/sign-out">Sign Out</a>
+        </li>
+        <li>
+            <a href="" class="text-decoration text-decoration-none fs-3">
+                <%=user.name%>
+            </a>
+        </li>
+        <%}else{%>
+            <li>
+                <a class="text-decoration text-decoration-none left-si btn-effect"  href="/users/sign-in">Sign In</a>
+            </li>
+            
+            <li>
+                <a class="text-decoration text-decoration-none left-su btn-effect" href="/users/sign-up">Sign Up</a>
+            </li>
+            <%}%>
+</ul>

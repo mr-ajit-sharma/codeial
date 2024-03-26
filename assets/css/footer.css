@@ -1,0 +1,8 @@
+#main-footer{
+
+    display: flex;
+        justify-content: space-between;
+        top: 94%;
+        width: 98%;
+        position: absolute;
+}

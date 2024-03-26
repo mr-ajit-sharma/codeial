@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="/css/home.css">
+<h1 class="">hello this is <%=title%>
+</h1>
+<div class="container">
+    <section id="feed-post">
+        <h2 class="heading">Post</h2>
+        <%if(locals.user){%>
+            <form action="/posts/create" method="POST" id="new-post-form">
+                <textarea placeholder="type your post here..." name="content" id="" cols="30" rows="10"
+                    required></textarea>
+                <input type="submit" value="post">
+            </form>
+            <%}%>
+                <div id="post-list-container">
+                    <ul>
+                        <% for(post of posts){%>
+                            <li>
+                                <%-include('_post')-%>
+                            </li>
+                            <%}%>
+                    </ul>
+                </div>
+    </section>
+
+
+    <section id="user-friends">
+        <h3 class="heading">Friends</h3>
+        <%for(u of all_users){%>
+            <p>
+                <a class="f-list" href="users/profile/<%= u.id%>">
+                    <%= u.name%>
+                </a>
+
+            </p>
+
+            <%}%>
+                <%-include('_chat_box')-%>
+    </section>
+</div>
+<!-- CHANGE: here we have imported these to create the post and comments -->
+<script src="/js/post_comment.js"></script>
+<script src="/js/home_posts.js"></script>
+
+
+<!-- CHANGE: imported these to toggle also created these for override the post and comment if there is already present a like -->
+<script src="/js/toggle_Likes.js"></script>
+<script>
+    $('.toggle-like-button').each(function () {
+        let self = this
+        let toggleLike = new ToggleLike(self)
+    })
+</script>
+
+<!-- here we have included the cdn to import the socket.io to run the chat engine -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.1/socket.io.js"></script>
+<script src="/js/chat_engine.js"></script>
+
+<%if(locals.user){%>
+    <!-- here we have given the path of chatBoxid it mean it has to go and connect-->
+    <script>
+        new ChatEngine('user-chat-box','<%= locals.user.email %>')
+
+    </script>
+    <%}%>

@@ -1,0 +1,36 @@
+.container{
+    display: flex;
+    flex-direction: row;
+}
+#feed-post{
+    width: 70%;
+    height: auto;
+}
+#user-friends{
+    height: auto;
+    margin: -5px 0;
+    width: 30%;
+    border-left: 1px solid lightseagreen;
+}
+textarea{
+    height: 5em;
+    width: 14em;
+}
+.heading{
+    color: black;
+    border-bottom: 3px solid white;
+    font-weight: bolder;
+    font-size: 2em;
+    font-family: sans-serif;
+}
+.f-list{
+    color: #ffff;
+    position: relative;
+    /* padding: 1em; */
+    /* left: 5em; */
+    top: 1em;
+}
+.f-list:hover{
+    border-left:.5px solid black;
+    color: green;
+}

@@ -1,0 +1,10 @@
+div{
+    height: 100%;
+    width: 100%;
+    margin: 2em;
+    padding: 1.5em;
+    border: 2px double red;
+    background: cyan;
+    font-family: sans-serif;
+    color: black;
+    }

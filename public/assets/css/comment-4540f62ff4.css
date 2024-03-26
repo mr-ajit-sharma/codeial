@@ -1,0 +1,33 @@
+#main-comment {
+    width: 10em;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.user {
+    color: chartreuse;
+    font-style: italic;
+    font-size: .8em;
+    border-bottom: 2px solid white;
+}
+
+.delete-comment-button {
+    background-color: green;
+    color: black;
+    font-size: .8em;
+}
+
+.delete-comment-button:hover {
+    background-color: red;
+    border: burlywood;
+    color: black;
+}
+.likes{
+    color:darkcyan;
+}
+.toggle-like-button{
+    font-weight: bolder;
+    color: crimson;
+}

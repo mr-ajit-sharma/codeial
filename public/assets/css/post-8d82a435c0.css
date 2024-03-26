@@ -1,0 +1,35 @@
+.post-comments>form,form{
+    display: flex;
+}
+.main-post{
+    border-top: 2px dotted cyan;
+    width: 15em;
+    margin: 1% 3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.post-comments{
+    display: flex;
+    width: 10em;
+    margin: 1% 27%;
+    flex-direction: column;
+    /* border-right:1px solid black; */
+}
+.post-comments-list{
+margin-left: 0;
+}
+.user{
+    color: greenyellow;
+    font-style: italic;
+    font-size: 1em;
+    border-bottom: 1px dotted black;
+}
+.delete{
+    background-color: green;
+    font-size: .7em;
+}
+.delete:hover{
+    background-color: red;
+    border: burlywood;
+}
